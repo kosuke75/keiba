@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './App.css';
-
-// レースセルコンポーネント
+import './App.mobile.css';
 const RaceCell = ({ race, selectedRaceId, onRaceSelect, venue }) => {
   const isSelected = selectedRaceId === race.id;
   let cellClasses = "race-cell";
   if (isSelected) cellClasses += " selected";
   else cellClasses += " upcoming";
 
-  return (
+return (
     <Link
       to={`/race/${venue.name}/${race.raceNum}`}
       className={cellClasses}

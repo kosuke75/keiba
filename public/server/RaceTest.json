@@ -3,7 +3,7 @@
   "venues": [
     {
       "name": "東京",
-      "session": "〇回東京〇日",
+      "session": "東京",
       "races": [
         {
           "id": 101,
@@ -42,7 +42,7 @@
     },
     {
       "name": "京都",
-      "session": "〇回京都〇日",
+      "session": "京都",
       "races": [
         {
           "id": 201,
@@ -81,7 +81,7 @@
     },
     {
       "name": "福島",
-      "session": "福島〇回〇日",
+      "session": "福島",
       "races": [
         {
           "id": 301,
