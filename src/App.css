@@ -1,0 +1,357 @@
+/* -----------------------------------------------------------------
+   Global & Layout Styles
+----------------------------------------------------------------- */
+
+/* 全体のコンテナ */
+.app-container {
+    min-height: 100vh;
+    background-color: #f4f4f9; /* 外側の背景色 */
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+/* メインコンテンツエリア (白い背景の領域) */
+.app-main-content {
+    background-color: #ffffff;
+    width: 100%; /* 親コンテナの幅をフルに使用 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-height: 100vh;
+}
+
+/* -----------------------------------------------------------------
+   Header & Navigation (共通)
+----------------------------------------------------------------- */
+
+.main-header {
+    display: flex;
+    /* 修正: ボタンが左右に張り付くのではなく、中央のコンテナ幅に合わせて配置 */
+    justify-content: space-between; 
+    align-items: center;
+    gap: 20px;
+    padding: 20px 30px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button {
+    /* 修正: flex-basis を使って、3つのボタンがほぼ均等に幅を占めるように調整 */
+    flex: 1 1 33%; 
+    max-width: 250px;
+    padding: 12px 15px;
+    border-radius: 12px;
+    border: 1px solid #d1d5db;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #374151;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+    text-decoration: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.nav-button:hover {
+    background-color: #f0f8ff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px);
+    border-color: #007bff;
+}
+
+.home-button.active {
+    background-color: #e0f0ff;
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.update-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.update-button:hover {
+    background-color: #0056b3;
+}
+
+
+/* -----------------------------------------------------------------
+   Race List Page Styles
+----------------------------------------------------------------- */
+
+.date-line {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #1f2937;
+    padding: 20px 24px 8px;
+}
+
+.course-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px 12px;
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: #4b5563;
+}
+
+.course-header-item {
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.race-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- RaceCell Base Style --- */
+.race-cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    border-radius: 12px;
+    transition: all 0.2s ease-in-out;
+    border: 1px solid #e5e7eb;
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+    background-color: #ffffff;
+}
+
+.race-cell.upcoming:hover {
+    background-color: #f9fafb;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.race-num {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: #1f2937;
+}
+
+.race-time {
+    font-size: 0.75rem;
+    margin-top: 2px;
+    color: #6b7280;
+}
+
+/* 1. 選択中 (Selected) */
+.race-cell.selected {
+    background-color: #dc3545;
+    border-color: #a71d2a;
+    color: white;
+    box-shadow: 0 6px 12px rgba(220, 53, 69, 0.4);
+    transform: scale(1.03);
+    z-index: 1;
+}
+
+.race-cell.selected .race-num,
+.race-cell.selected .race-time {
+    color: white;
+}
+
+/* 2. 終了済 (Finished) */
+.race-cell.finished {
+    background-color: #e9ecef;
+    border-color: #ced4da;
+    color: #adb5bd;
+    cursor: default;
+    opacity: 0.8;
+}
+
+.race-cell.finished .race-num,
+.race-cell.finished .race-time {
+    color: #adb5bd;
+}
+
+
+/* -----------------------------------------------------------------
+   Race Table Page Styles (出馬表詳細)
+----------------------------------------------------------------- */
+
+.race-table-container {
+    background-color: #ffffff;
+    min-height: 100vh;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.race-detail-content {
+    padding: 30px;
+}
+
+.detail-header-info {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 10spx;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.detail-header-info h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #1f2937;
+}
+
+.detail-header-info p {
+    color: #6c757d;
+}
+
+/* --- コントロールパネル --- */
+.control-panel {
+    background-color: #e9ecef; /* ライトグレー */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.control-panel label {
+    font-weight: bold;
+    color: #343a40;
+    cursor: pointer;
+}
+
+.control-panel button {
+    padding: 4px 15px;
+    cursor: pointer;
+    border: none;
+    background-color: #28a745; /* グリーン */
+    color: white;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.control-panel button:hover {
+    background-color: #1e7e34;
+}
+
+/* --- 出馬表テーブル --- */
+#race-table {
+    width: 85%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    border-radius: 8px;
+    overflow: hidden; /* 角丸を適用 */
+}
+
+#race-table th, #race-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+#race-table th {
+    background-color: #004d99; /* 濃い青 */
+    color: white;
+    font-size: 0.9rem;
+}
+
+#race-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa; /* 薄いストライプ */
+}
+
+.horse-name {
+    text-align: left !important;
+    font-weight: bold;
+    color: #343a40;
+}
+
+/* --- 枠の色 (ユーザー提供CSSを維持) --- */
+.waku-1 { background-color: #ffffff; color: black; font-weight: bold; border-left: 5px solid #000; } /* 白 */
+.waku-2 { background-color: #000000; color: white; font-weight: bold; border-left: 5px solid #000; } /* 黒 */
+.waku-3 { background-color: #ff0000; color: white; font-weight: bold; border-left: 5px solid #000; } /* 赤 */
+.waku-4 { background-color: #0000ff; color: white; font-weight: bold; border-left: 5px solid #000; } /* 青 */
+.waku-5 { background-color: #ffff00; color: black; font-weight: bold; border-left: 5px solid #000; } /* 黄 */
+.waku-6 { background-color: #008000; color: white; font-weight: bold; border-left: 5px solid #000; } /* 緑 */
+.waku-7 { background-color: #ffa500; color: white; font-weight: bold; border-left: 5px solid #000; } /* 橙 */
+.waku-8 { background-color: #ffc0cb; color: black; font-weight: bold; border-left: 5px solid #000; } /* 桃 */
+
+.waku-1, .waku-2, .waku-3, .waku-4, .waku-5, .waku-6, .waku-7, .waku-8 {
+    width: 30px;
+    font-size: 1.1rem;
+}
+
+/* --- 予想印のスタイル (ユーザー提供CSSを維持) --- */
+.yosou-cell {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.yosou-select {
+    border: none;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 2px 4px;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    width: 50px;
+    text-align: center;
+}
+
+.yosou-honmei { color: #e3415c !important; }
+.yosou-taikou { color: #0000ff !important; }
+.yosou-tanana { color: #000000 !important; }
+.yosou-renshita { color: #008000 !important; }
+
+/* 戻るボタン */
+.back-to-list-button {
+    display: block;
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto 40px;
+    padding: 15px 30px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.back-to-list-button:hover {
+    background-color: #5a6268;
+}
+
+/* 404/データなしメッセージ */
+.not-found-message {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 8px;
+    margin: 30px;
+}
+
+.not-found-message h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.not-found-message .back-button {
+    padding: 10px 20px;
+    background-color: #721c24;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}

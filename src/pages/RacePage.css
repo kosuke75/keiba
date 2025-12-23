@@ -1,0 +1,160 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* --- コントロールパネル --- */
+.control-panel {
+    background-color: #e9e9e9;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.control-panel label {
+    margin-right: 15px;
+    font-weight: bold;
+    display: inline-block; /* チェックボックスを横並びにする */
+    margin-bottom: 5px;
+}
+
+.control-panel button {
+    margin-left: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+}
+
+/* --- 出馬表テーブル --- */
+#race-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#race-table th, #race-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    white-space: nowrap; /* テキストが改行されないように */
+}
+
+#race-table th {
+    background-color: #004d99; /* 濃い青 */
+    color: white;
+}
+
+#race-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* 馬名だけ左寄せで見やすく */
+.horse-name {
+    text-align: left !important;
+    font-weight: bold;
+}
+
+/* --- 枠の色 --- */
+.waku-1 { background-color: #ffffff; color: black; font-weight: bold; border-left: 5px solid #000; } /* 白 */
+.waku-2 { background-color: #000000; color: white; font-weight: bold; border-left: 5px solid #000; } /* 黒 */
+.waku-3 { background-color: #ff0000; color: white; font-weight: bold; border-left: 5px solid #000; } /* 赤 */
+.waku-4 { background-color: #0000ff; color: white; font-weight: bold; border-left: 5px solid #000; } /* 青 */
+.waku-5 { background-color: #ffff00; color: black; font-weight: bold; border-left: 5px solid #000; } /* 黄 */
+.waku-6 { background-color: #008000; color: white; font-weight: bold; border-left: 5px solid #000; } /* 緑 */
+.waku-7 { background-color: #ffa500; color: white; font-weight: bold; border-left: 5px solid #000; } /* 橙 */
+.waku-8 { background-color: #ffc0cb; color: black; font-weight: bold; border-left: 5px solid #000; } /* 桃 */
+
+/* 枠番の列の幅を固定 */
+.waku-1, .waku-2, .waku-3, .waku-4, .waku-5, .waku-6, .waku-7, .waku-8 {
+    width: 30px;
+}
+
+/* ... 枠の色設定など、既存のCSSは省略 ... */
+
+/* --- 出馬表テーブル (既存) --- */
+#race-table {
+    width: 100%;
+    /* ... 既存のスタイル ... */
+}
+/* ... 既存のスタイル ... */
+
+/* --- 予想印のスタイル --- */
+.yosou-cell {
+    cursor: pointer; /* クリック可能であることを示す */
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* ... 既存のCSSは省略 ... */
+
+/* --- 予想印のスタイル --- */
+
+/* ドロップダウンのベーススタイル */
+.yosou-select {
+    border: none;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 2px 4px;
+    background-color: transparent; /* 背景を透明にしてtdの色を反映しやすくする */
+    -webkit-appearance: none; /* 標準のドロップダウン矢印を非表示 */
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    /* ドロップダウンの幅を固定または調整 */
+    width: 50px; /* 必要に応じて調整 */
+}
+
+/* 選択肢（td）の背景に色を適用するため、tdにクラスを適用します */
+.yosou-none {
+    /* 何もしない */
+}
+
+/* ◎ 本命: 赤文字のみ */
+.yosou-honmei {
+    color: #e3415c !important; /* 濃い赤 */
+    /* 背景色に関するスタイルは削除 */
+}
+
+/* ◯ 対抗: 青 */
+.yosou-taikou {
+    color: #0000ff !important;
+}
+
+/* ▲ 単穴: 黒 */
+.yosou-tanana {
+    color: #000000 !important;
+}
+
+/* △ 連下: 緑 */
+.yosou-renshita {
+    color: #008000 !important;
+}
+
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-button:hover {
+  text-decoration: underline;
+}
+

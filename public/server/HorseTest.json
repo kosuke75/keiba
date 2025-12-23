@@ -1,0 +1,190 @@
+{
+  "horses": [
+    {
+      "num": 1,
+      "waku": 1,
+      "name": "東京馬1-1",
+      "serei": "牡2",
+      "weight": 55,
+      "jockey": "騎手A",
+      "trainer": "調教師A",
+      "odds": 3.5,
+      "bataiju": 500,
+      "pastRaces": [
+        {
+          "date": "2025-10-20",
+          "venue": "東京",
+          "title": "2歳新馬",
+          "rank": 1,
+          "total": 12,
+          "time": "1:34.5",
+          "jockey": "騎手A"
+        },
+        {
+          "date": "2025-09-15",
+          "venue": "東京",
+          "title": "2歳未勝利",
+          "rank": 3,
+          "total": 14,
+          "time": "1:36.2",
+          "jockey": "騎手B"
+        }
+      ]
+    },
+    {
+      "num": 2,
+      "waku": 2,
+      "name": "東京馬1-2",
+      "serei": "牝2",
+      "weight": 54,
+      "jockey": "騎手B",
+      "trainer": "調教師B",
+      "odds": 5.2,
+      "bataiju": 480,
+      "pastRaces": [
+        {
+          "date": "2025-10-18",
+          "venue": "東京",
+          "title": "2歳未勝利",
+          "rank": 2,
+          "total": 10,
+          "time": "1:35.0",
+          "jockey": "騎手B"
+        },
+        {
+          "date": "2025-09-10",
+          "venue": "東京",
+          "title": "2歳新馬",
+          "rank": 4,
+          "total": 12,
+          "time": "1:37.3",
+          "jockey": "騎手A"
+        }
+      ]
+    },
+    {
+      "num": 1,
+      "waku": 1,
+      "name": "京都馬1-1",
+      "serei": "牡2",
+      "weight": 55,
+      "jockey": "騎手G",
+      "trainer": "調教師G",
+      "odds": 3.2,
+      "bataiju": 502,
+      "pastRaces": [
+        {
+          "date": "2025-10-12",
+          "venue": "京都",
+          "title": "2歳未勝利",
+          "rank": 1,
+          "total": 12,
+          "time": "1:34.8",
+          "jockey": "騎手G"
+        },
+        {
+          "date": "2025-09-08",
+          "venue": "京都",
+          "title": "2歳新馬",
+          "rank": 3,
+          "total": 14,
+          "time": "1:36.5",
+          "jockey": "騎手H"
+        }
+      ]
+    },
+    {
+      "num": 2,
+      "waku": 2,
+      "name": "京都馬1-2",
+      "serei": "牝2",
+      "weight": 54,
+      "jockey": "騎手H",
+      "trainer": "調教師H",
+      "odds": 4.8,
+      "bataiju": 488,
+      "pastRaces": [
+        {
+          "date": "2025-10-10",
+          "venue": "京都",
+          "title": "2歳未勝利",
+          "rank": 2,
+          "total": 10,
+          "time": "1:35.3",
+          "jockey": "騎手H"
+        },
+        {
+          "date": "2025-09-05",
+          "venue": "京都",
+          "title": "2歳新馬",
+          "rank": 4,
+          "total": 12,
+          "time": "1:37.8",
+          "jockey": "騎手G"
+        }
+      ]
+    },
+    {
+      "num": 1,
+      "waku": 1,
+      "name": "福島馬1-1",
+      "serei": "牡3",
+      "weight": 56,
+      "jockey": "騎手M",
+      "trainer": "調教師M",
+      "odds": 3.7,
+      "bataiju": 505,
+      "pastRaces": [
+        {
+          "date": "2025-10-08",
+          "venue": "福島",
+          "title": "3歳上未勝利",
+          "rank": 1,
+          "total": 12,
+          "time": "1:35.5",
+          "jockey": "騎手M"
+        },
+        {
+          "date": "2025-09-03",
+          "venue": "福島",
+          "title": "3歳未勝利",
+          "rank": 3,
+          "total": 14,
+          "time": "1:37.0",
+          "jockey": "騎手N"
+        }
+      ]
+    },
+    {
+      "num": 2,
+      "waku": 2,
+      "name": "福島馬1-2",
+      "serei": "牝3",
+      "weight": 54,
+      "jockey": "騎手N",
+      "trainer": "調教師N",
+      "odds": 5.1,
+      "bataiju": 490,
+      "pastRaces": [
+        {
+          "date": "2025-10-05",
+          "venue": "福島",
+          "title": "3歳上未勝利",
+          "rank": 2,
+          "total": 10,
+          "time": "1:36.2",
+          "jockey": "騎手N"
+        },
+        {
+          "date": "2025-09-01",
+          "venue": "福島",
+          "title": "3歳未勝利",
+          "rank": 4,
+          "total": 12,
+          "time": "1:38.0",
+          "jockey": "騎手M"
+        }
+      ]
+    }
+  ]
+}
